@@ -1,0 +1,3527 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+  
+.registon {
+    height: 90vh;
+    background: url("../images/Desktop/Registon/1234567.png");
+    background-size: cover;
+    animation: fade-down0 3s;
+    background-position: center center;
+ }
+
+ .full-landing-image{
+    width: 100%;
+    height: 100vh;
+    background: url("../images/1234567.png")  center;
+    background-size: cover;
+  }
+  
+
+  /* <!-- Effectli rasmdstur kodi boshlandi --> */
+
+
+  *,
+  *::before,
+  *::after{
+      box-sizing: border-box;
+  }
+ 
+  body{
+      font-family: 'roboto', sans-serif;
+      color: #454545;
+      font-weight: 400;
+      background: #ffffff;
+  }
+  a{
+      color: #333333;
+      font-weight: 400;
+      outline: none;
+      text-decoration: none;
+      transition: 0.5s;
+  }
+  .containercon{
+      box-sizing: border-box;
+      line-height: 1.15;
+  
+      width: 100%;
+      padding-right:15px ;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+  }
+  
+  .rowcon{
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+      animation: fade-down2 4s;
+  }
+  @keyframes fade-down2{
+
+    from{
+        opacity: 0;
+        transform: translateX(-200px) scale(0.6);
+        transform: translateY(200px) scale(0.6);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateZ(100px) scale(1);
+
+    }
+}
+  .columncon{
+      position: relative;
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+  .section-title{
+      position: relative;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      padding: 45px 0 30px 0;
+  }
+  .section-title::after{
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      left: 0;
+      background: #eeeeee;
+  }
+  
+  
+  .effect{
+      position: relative;
+      margin-bottom: 30px;
+      overflow: hidden;
+      border-radius: 10px;
+  }
+  .effect .effect-img{
+      font-size: 0;
+      overflow: hidden;
+  }
+  .effect .effect-img img{
+      width: 100%;
+      height: auto;
+      transition: all .3s;
+  }
+  
+  .effect:hover .effect-img img{
+      transform: scale(1.2);
+  }
+  
+  .effect .effect-text{
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      bottom: 15px;
+      left: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: rgba(0, 0, 0, .5);
+      overflow: hidden;
+      transition: all .3s ease-in;
+      opacity: 0;
+  }
+  .effect .effect-text .innercon{
+      position: absolute;
+      padding: 15px;
+      z-index: 1;
+  }
+  .effect .effect-text:before,
+  .effect .effect-text:after{
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 0;
+      content: '';
+  }
+  .effect .effect-text:before{
+      border-top: 3px solid #ffffff;
+      border-right: 3px solid #ffffff;
+      left: -100%;
+      top: 0;
+  }
+  .effect .effect-text:after{
+      border-bottom: 3px solid #ffffff;
+      border-left: 3px solid #ffffff;
+      left: 100%;
+      bottom: 0;
+  }
+  .effect:hover .effect-text{
+      opacity: 1;
+  }
+  .effect:hover .effect-text:after,
+  .effect:hover .effect-text:before{
+      animation-delay: .1s;
+      animation-duration: .5s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+  }
+  .effect:hover .effect-text:after{
+      animation-name: left-up;
+  }
+  .effect:hover .effect-text:before{
+      animation-name: right-dn;
+  }
+  
+  @keyframes left-up {
+      0% {
+          left: 100%;
+          height: 0;
+      }
+      50% {
+          left: 0;
+          height: 0;
+      }
+      100% {
+          height: 100%;
+          left: 0;
+      }
+  }
+  
+  @keyframes right-dn {
+      0% {
+          left: -100%;
+          height: 0;
+      }
+      50% {
+          left: 0;
+          height: 0;
+      }
+      100% {
+          height: 100%;
+          left: 0;
+      }
+  }
+  
+  .effect .effect-text h2{
+      height: 45px;
+      color: #ffffff;
+      font-size: 25px;
+      margin: 0;
+  }
+  
+  .effect .effect-text p{
+      color: #ffffff;
+      font-size: 16px;
+      margin-bottom: 20px;
+  }
+  .effect .effect-btn .btncon{
+      display: inline-block;
+      height: 35px;
+      padding: 7px 15px;
+      font-size: 15px;
+      color: #333333;
+      background: #ffffff;
+  }
+  .effect .effect-btn .btncon:hover{
+      background-color: aqua;
+  }
+  
+  @media (min-width:576px){
+      .containercon{
+          max-width: 475px;
+      }
+      .columncon{
+          flex: 0 0 100%;
+          max-width: 100%;
+      }
+  }
+  @media (min-width: 768px){
+      .containercon{
+          max-width: 720px;
+      }
+      .columncon{
+          flex: 0 0 50%;
+          max-width: 50%;
+      }
+  }
+  
+  
+  @media (min-width:992px){
+      .containercon{
+          max-width: 960px;
+      }
+      .columncon{
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+  }
+  @media (min-width:1200px){
+      .containercon{
+          max-width: 1140px;
+      }
+      .columncon{
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+      }
+  }
+
+/* <!-- Effectli rasmdstur kodi tugadi --> */
+.ism{
+    margin-left:31%;
+}
+.kasb{
+    margin-left:25%;
+}
+ /*  Orders sahiasidagi dastur kodi boshlandi*/
+ 
+  /*  Orders sahiasidagi dastur kodi boshlandi*/
+
+ /* <!-- Sariqli rasm content dastur kodi boshlandi --> */
+ 
+ .wrappermalumot1 {
+    background: url("../images/Telefon/Home/buxoriy1.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+    width: 400px;
+    margin-left: 200px;
+    margin-top: 30px;
+    box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+    display: inline-block;
+    animation:fade-down1 2s;
+}
+
+
+.wrappermalumot2 {
+    background: url("../images/Desktop/Doniyor-ota/doniyor-ota4.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+    width: 400px;
+    margin-left: 130px;
+    margin-top: 30px;
+    box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+    display: inline-block;
+    animation: fade-down1 2s;
+}
+
+.wrappermalumot3 {
+    background: url("../images/Desktop/A-Temur/6A-Temur.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+    width: 400px;
+    margin-left: 200px;
+    margin-top: 30px;
+    box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+    display: inline-block;
+    animation: fade-down1 2s;
+}
+@keyframes fade-down1{
+    from{
+        opacity: 0;
+        transform: translateX(-200px) scale(0.6);
+        transform: translateY(200px) scale(0.6);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateZ(100px) scale(1);
+
+    }
+}
+.wrappermalumot4 {
+    background: url("../images/Desktop/A-Temur-haykali/haykal1.webp");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+    width: 400px;
+    margin-left: 130px;
+    margin-top: 30px;
+    box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+    display: inline-block;
+    animation: fade-down2 3s;
+}
+
+.wrappermalumot5 {
+    background: url("../images/Desktop/Rasadxona/rasadxonasi.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+    width: 400px;
+    margin-left: 200px;
+    margin-top: 30px;
+    box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+    display: inline-block;
+    animation: fade-down2 3s;
+}
+
+.wrappermalumot6 {
+    background: url("../images/Desktop/Siyob-bozor/siyob5.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+    width: 400px;
+    margin-left: 130px;
+    margin-top: 30px;
+    box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+    display: inline-block;
+    animation: fade-down2 3s;
+}
+
+
+
+@keyframes fade-down2{
+    from{
+        opacity: 0;
+        transform: translateX(-200px) scale(0.6);
+        transform: translateY(200px) scale(0.6);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateZ(100px) scale(1);
+
+    }
+}
+.boxmalumot {
+  box-shadow: 0px 0px 9px 1px black;
+  border: 1px solid black;
+  border-radius: 5px;
+
+  width: 400px;
+  padding: 10px;
+  clip-path: circle(5% at 91% 7%);
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+  height: 400px;
+}
+  .contentmalumot {
+    text-align: center;
+    padding: 25px 15px;
+}
+.boxmalumot:hover{
+  clip-path:circle(75%);
+  background: rgb(0 0 0 / 50%);
+}
+
+.boxmalumot:hover span{
+  color:rgba(255,255,255,0);
+}
+.boxmalumot span {
+    float: right;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transition: color .5s;
+    position: relative;
+    margin-right: 4.5%;
+    top: 5px;
+    font-size: 20px;
+}
+
+.boxmalumot h1{
+  color:#fff;
+}
+.boxmalumot p{
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    line-height: 1.5;
+}
+.boxmalumot p a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 11px;
+    text-align: justify;
+    line-height: 2;
+}
+.boxmalumot p a:hover{
+  color: #ff6400;
+}
+.boxmalumot p a:active{
+    color: #05a2ff; 
+}
+  .socialmalumot {
+  text-align: center !important;
+  margin-top: 25px;
+}
+.socialmalumot i {
+  font-size: 28px;
+  margin: 0 15px;
+}
+
+ /* <!-- Sariqli rasm content dastur kodi tugadi --> */
+
+/* CARUSELLLLLLLLLL boshlandi*/
+
+#container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: fade-down000 4s;
+}
+@keyframes fade-down000{
+    from{
+        opacity: 0;
+        transform: translateX(-200px) scale(0.6);
+        transform: translateY(200px) scale(0.6);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateZ(100px) scale(1);
+
+    }
+}   
+#carousel, #navigation {
+    flex: initial;
+    display: block;
+}
+            
+#carousel {
+    border: 1px solid black;
+    overflow: hidden;
+    width: 1000px;
+    height: 570px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+            
+.p-wrapper {
+    border: 1px red black;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+            
+#button_a:checked ~ #carousel .p-wrapper {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); 
+}
+            
+#button_b:checked ~ #carousel .p-wrapper {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); 
+}
+
+#button_c:checked ~ #carousel .p-wrapper {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%); 
+}
+
+#button_d:checked ~ #carousel .p-wrapper {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%); 
+}
+            
+[class^="panel_"] {
+    overflow: auto;
+    position: relative;
+    width: inherit;
+    height: inherit;
+    padding: 20px;
+}
+.xarita1 {
+    border: 0px solid black;
+    width: 234px;
+    height: 50px;
+    border-radius: 6px;
+    text-align: center;
+    margin-left: 300px;
+    padding-top: 11px;
+    box-shadow: 0px 0px 6px 1px black;
+    background-color: white;
+    transition: 1s;
+    transform: scale(1);
+}
+.xarita1:hover{
+    transform: scale(1.05);
+ 
+
+}
+.xarita a{
+     font-size: 20px;
+     color: black;
+}
+.xarita a:hover{
+    color: #292CB9;
+}
+.xarita a:active{
+    color: rgb(0, 238, 255);
+}
+.xarita a span{
+    font-weight: bold;
+}
+.xarita a span:hover{
+    color: red;
+}
+.bibi{
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 42%;
+}        
+.bibi2{
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.5;
+    
+}
+
+.bibi3{
+    border: 0px solid yellow;
+    width: 834px;
+    margin-left: 70px;
+    
+}
+.bibi3 span{
+    border: 0px solid red;
+    display: inline-block;
+}
+.bibi3 span img{
+    border: 0px solid black;
+    width: 390px;
+    height: 380px;
+    padding: 15px;
+    transform: scale(1);
+    transition: 0.6s;
+}
+
+.bibi3 span img:hover{
+    transform: scale(1.05);
+    
+}
+#navigation {
+    margin-left: 24px;
+}
+#navigation label {
+   
+    box-shadow: 2px 4px 8px 3px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(12, 12, 12, 0.19);
+}
+#navigation label span{
+    color: black;
+    font-size: 25px;
+}
+
+[class^="label_"] {
+    display: block;
+    cursor: pointer;
+    margin: 10px 0;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    color: #aaa;
+    background-color: #fff;
+    transform: scale(1);
+	transition: transform 0.5s;
+    /* transition: all 0.3s ease; */
+}
+            
+[class^="label_"]:hover {
+    color: rgb(17, 16, 16);
+    background-color: #ff8f06;
+    transform: scale(1.19);
+}
+[class^="label_"]:active{
+    background-color: #2980B9;
+}
+        
+#button_a:checked ~ #navigation .label_a,
+#button_b:checked ~ #navigation .label_b,
+#button_c:checked ~ #navigation .label_c,
+#button_d:checked ~ #navigation .label_d {
+     cursor: default;
+     color: #fff;
+     background-color: #222;
+}
+/* CARUSELLLLLLLLLL tugadi*/
+
+.orqafon{
+    width: 100%;
+    height: 90vh;
+    background: url("../images/Desktop/Bibixonim/bibixonim6.jpg");
+    background-size:cover;
+    background-position: center center;
+    background-attachment: fixed;
+    animation: fade-down 3s;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.orqafon p{
+    padding: 10px;
+    text-align: justify;
+}
+
+@keyframes fade-down{
+    from{
+        opacity: 0;
+        transform: translateX(-100px) scale(0.6);
+        transform: translateY(100px) scale(0.6);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateZ(0px) scale(1);
+
+    }
+}
+
+
+/* Slide boshlanishi  */
+
+
+.mySlides {
+    display: none
+}
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prevrasm, .nextrasm {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.nextrasm {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prevrasm:hover, .nextrasm:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Caption text */
+.textrasm {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dotrasm {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #242D41;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dotrasm:hover {
+  background-color: #171b23;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: .2s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.2} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.2} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prevrasm, .nextrasm,.textrasm {font-size: 11px}
+.dotrasm{
+ height: 10px;
+  width: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+  .prevrasm, .nextrasm,.textrasm {font-size: 14px}
+}}
+ /* slide tugashi */
+ 
+/* image 1 malumot boshlandi */
+ 
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+.container-allbox{
+  width: fit-content;
+  margin: 20px auto;
+  height: auto;
+  animation: fade-down4 6s;
+}
+@keyframes fade-down4{
+    from{
+        opacity: 0;
+        transform: translateX(-100px) scale(0.2);
+        transform: translateY(100px) scale(0.2);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px) scale(1);
+    }
+}
+.containerbox{
+  width: calc(33% - 6px);
+  overflow:hidden;
+  height: fit-content;
+  margin:3px;
+  padding: 0;
+  display:block;
+  position:relative;
+  float:left;
+}
+.containerbox img{
+  width: 100%;
+  height: 300px;
+  transition-duration: .3s;
+  max-width: 100%;
+  filter: grayscale(100%);
+  display:block;
+  overflow:hidden;
+  cursor:pointer;
+}
+.containerbox:hover img{
+    transform: scale(1.2);
+    transition-duration: .4s;
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+.titlebox{
+  position:absolute;
+  display:block;
+  cursor:pointer;
+  top: 50%;
+  display: none;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 1.8em;
+  text-shadow: 1px 5px 10px black;
+  transition-duration: .3s;
+  text-decoration: none;
+}
+.titlebox a{
+  text-decoration: none;
+}
+.textbox{
+  position:absolute;
+  top: 60%;
+  cursor:pointer;
+  max-width: 80%;
+  text-align:center;
+  left: 50%;
+  text-shadow: 1px 5px 10px black;
+  font-size: 20px;
+  display:none;
+  margin-right: -50%;
+  transition-duration: .3s;
+  transform: translate(-50%, -50%) 
+}
+
+.containerbox:hover span{
+  color:white;
+  display: block;
+  transition-duration: .3s;
+}
+@media only screen and (max-width: 900px) {
+    .containerbox {
+        width: calc(50% - 6px);
+    }
+}
+@media only screen and (max-width: 400px) {
+    .containerbox {
+        width: 100%;
+    }
+}
+/* image 1 malumot tugadi */
+
+
+/* shop sahifasidagi galleriya dastur kodi boshlandi */
+
+.containeruzsam {
+    width: 85vw;
+    height: 87vh;
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    display: flex;
+}
+.oftenqs{
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    border: 0px solid black;
+    text-align: center;
+}
+.oftenqs h1{
+    border: 0px solid black;
+    text-align: center;
+    font-size: 27px;
+}
+.oftenqs b{
+    color: #EEEEEE;
+}
+/* <!-- According to ya'ni tez tez beriladigan savollar dastur kodi boshlanishi --> */
+
+.accordion-menu {
+    border: 1px solid black;
+    max-width: 1200px;
+    margin: 40px auto 20px;
+    background: #242d41;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #000;
+    display: block;
+}
+
+.accordion-menu li:last-child .dropdown {
+    border-bottom: 0;
+}
+.accordion-menu li.active .dropdown {
+    color: #fff;
+}
+.accordion-menu li.active .dropdown  .fa-chevron-down {
+    transform: rotate(180deg);
+}
+.dropdown {
+    cursor: pointer;
+    display: block;
+    padding: 15px 15px 15px 35px;
+    font-size: 22px;
+    border-bottom: 2px solid #2d374d;
+    color: #999999;
+    position: relative;
+    transition: all 0.5s ease-out;
+}
+
+.dropdown:hover{
+    background: #566f82; /* fallback colour */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#27455c), to(#273a47));
+}
+  
+.dropdown  i {
+    position: absolute;
+    top: 17px;
+    left: 15px;
+}
+
+.dropdown .fa-chevron-down {
+    right: 12px;
+    left: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.submenuItems {
+    display: none;
+    background: #2d374d;;
+    transition: all 2s ease-in-out;
+}
+
+.accordion-menu li.active .submenuItems{
+    display: block;
+}
+
+.submenuItems a {
+    display: block;
+    color: #66b2ff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 12px 12px 45px;
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+    text-align: justify;
+}
+
+.submenuItems a:hover {
+    background-color: #5c7185;
+    color: #fff;
+  }
+
+  /* <!-- According to ya'ni tez tez beriladigan savollar dastur kodi tugashi --> */
+.tab {
+    width: calc(10vh + 8px);
+    height: calc(10vh + 8px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
+    shape-outside: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
+    z-index: 0;
+    transition: width 0.5s;
+}
+
+.tab img {
+    width: 30vh;
+    height: 20vh;
+    z-index: 10;
+    cursor: pointer;
+    clip-path: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
+    shape-outside: polygon(0% 50%, 15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%);
+    transition: width 0.5s;
+}
+
+[type=radio] {
+    display: none;   
+}
+
+.preview-list {
+    background: linear-gradient(
+        #021919,
+        #021919 var(--line-offset),
+        #efefef var(--line-offset)
+    );
+}
+
+.tab {
+    background: linear-gradient(
+        #efefef,
+        #efefef var(--line-offset),
+        #021919 var(--line-offset)
+    );
+}
+
+[type=radio]:checked ~ label ~ .content{
+    text-align: center;
+    z-index: 8;
+}
+
+
+[type=radio]:checked ~ label .tab{
+    width: 0;
+}
+
+.content {
+    position: absolute;
+    background: white;
+    top: 1vh;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.content img {
+    height: auto;
+    width: 100vw;  
+}
+/* shop sahifasidagi galleriya dastur kodi tugadi*/
+
+.samuzbar{
+    border: 0px solid black;
+}
+.samuzbar b{
+    border: 0px solid black;
+    width: 300px;
+    margin-top: 100px;
+    height: 50px;
+    margin-left: 300px;
+    font-size: 30px;
+    transition: 1s;
+    text-align: center;
+}
+.samuzbar:hover{
+    color: #08c3f1;
+}
+.samuzbar :hover{
+    color: #08c3f1;
+}
+.samuzbar i{
+    font-size: 30px;
+    transition: 0.2s;
+}
+.samuzbar i:hover{
+    color: rgb(74, 250, 4);
+}
+
+/* <!--  BIRINCHI progresning boshlanish kodi  BAR--> */
+
+  .chart {
+    width: 900px;
+    height: 400px;
+    display: block;
+    margin: 30px auto 50px auto;
+}
+.numbers {
+    color: black;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 100%;
+    display: inline-block;
+
+}
+  
+.numbers li {
+    list-style: none;
+    height: 198px;
+    position: relative;
+    bottom: 187px;
+}
+.belgisamuz1:hover{
+    color: rgb(22, 235, 22);
+}
+.belgisamuz2:hover{
+    color: rgb(0, 102, 255);
+}
+.belgisamuz3:hover{
+    color: red;
+}
+  .numbers span{
+    font-size: 15px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+  }
+  
+  .bars {
+    color: black;
+    font-size: 12px;
+    font-weight: 600;
+    background: #555;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 800px;
+    height: 400px;
+    box-shadow: 0 0 10px 0 #555;
+    border-radius: 5px;
+}
+  
+.bars li {
+    display: table-cell;
+    width: 120px;
+    height: 400px;
+    position: relative;
+}
+  
+  .bars span{
+    width: 100%;
+    position: absolute;
+    bottom: -30px;
+    text-align: center;
+    font-size: 19px;
+  }
+  
+  .bars .bar{
+    display: block;
+    background: #17C0EB;
+    width: 50px;
+    position: absolute;
+    bottom: 0;
+    margin-left: 25px;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(23, 192, 235, 0.5);
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+  }
+  
+  .bars .bar:hover{
+    background: #55EFC4;
+    box-shadow: 0px 0px 10px 8px rgb(85 239 196 / 50%);
+    cursor: pointer;
+  }
+  
+  .bars .bar:before{
+    color: #fff;
+    content: attr(data-percentage) '%';
+    position: relative;
+    bottom: 20px;
+  }
+        
+/* <!--  BIRINCHI progresning tugash kodi BAR--> */
+
+
+.danger{
+    font-size: 20px;
+    text-align: center;
+}
+
+.load-more{
+    margin-top: -25px;
+    margin-left: 40%;
+    display: inline-block;
+    padding:12px 20px;
+    border: 0px solid #334;
+    color:#334;
+    font-size: 18px;
+    background-color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+   }
+  .load-more a{
+    color: black;
+    text-decoration: none;
+  }
+
+  .load-more:hover{
+    background-color: crimson;
+    border-color: crimson;
+    color:#fff;
+    transition: all .3s linear;
+    box-shadow: 0px 0px 4px 2px rgb(2, 2, 2);
+  }
+  
+  .videosamarqand{
+    border: 0px solid black;
+    width: 100%;
+    height: 620px;
+
+  }
+  .lavha{
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .lavha1{
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+
+/* for mobile phone devices */
+@media (min-width:0px) and (max-width:299px){
+    .ism{
+        margin-left: 24%;
+    }
+    .kasb{
+        margin-left: 17%;
+    }
+    .readread1{
+        margin-left: 5%;
+       
+    }
+    .foydalanuvchiext{
+        margin-left: 10px;
+    }
+    .section-title{
+        font-size: 10px;
+    }
+    .header .flex .logo img{
+        width: 40px;
+        height: 30px;
+    }
+    .videosamarqand{
+        display: none;
+    }
+    .lavha{
+        display: none;
+    }
+    .dots{
+        left: 25%;
+    }
+    #container{
+        min-height: 10vh;
+    }
+    .oftenqs{
+        display: none;
+    }
+    .load-more {
+        margin-left: 12%;
+    }
+    .orqafon{
+        display: none;
+    }
+    #carousel{
+        display: none;
+    }
+    .samuzbar{
+        display: none;
+    }
+    .chart{
+        display: none;
+    }
+    .chart{
+        display: none;
+    }
+    .containeruzsam{
+        display: none;
+    }
+    .danger{
+        font-size: 20px;
+        text-align: justify;
+        padding: 15px;
+    }
+    .registon{
+        width: 100%;
+        height: 50vh;
+        background: url("../images/Telefon/5reg400.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+    .wrappermalumot1 {
+        display: none;
+       
+    }
+    .wrappermalumot2 {
+        display: none;
+    }
+    .wrappermalumot3 {
+        display: none;
+    }
+    .wrappermalumot4 {
+        display: none;
+    }
+    .wrappermalumot5 {
+        display: none;
+    }
+    .wrappermalumot6 {
+       display: none;
+    }
+    .accordion-menu{
+        display: none;
+    }
+    #navigation{
+        display: none;
+    }
+    .containerbox img{
+        filter: grayscale(0);
+    }
+    .ismsharif{
+        display: none;
+     }
+     .registon .tillarone{
+        width: 100%;
+        height: 50px;
+        text-align: right;
+        padding: 10px;
+     }
+     .registon .tillartwo{
+        font-size: 12px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 5px;
+        color: white;
+     }
+     .registon .tillartwo:hover{
+        border: 1px solid rgb(44, 36, 36);
+     }
+     
+}
+
+
+
+@media (min-width:300px) and (max-width:330px){
+    .registon .tillarone{
+        width: 100%;
+        height: 50px;
+        text-align: right;
+        padding: 10px;
+     }
+     .registon .tillartwo{
+        font-size: 15px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 5px;
+        color: white;
+     }
+     .registon .tillartwo:hover{
+        border: 1px solid rgb(44, 36, 36);
+     }
+    .ism{
+        margin-left: 26%;
+    }
+    .kasb{
+        margin-left: 19%;
+    }
+    .readread1{
+        margin-left: 10%;
+       
+    }
+    .foydalanuvchiext{
+        margin-left: 25px;
+        font-size: 17px;
+    }
+    .foydalanuvchiend{
+        font-size: 17px;
+    }
+    .bibi{
+        font-size: 17px;
+        margin-left: 19%;
+    }
+    .bibi2{
+        font-size: 15px;
+    }
+    .bibi3{
+        margin-left: 0px;
+        width: 200px;
+    }
+    .bibi3 span img{
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    }
+    .xarita1{
+        margin-left: 0px;
+        width: 190px;
+        height: 45px;
+        margin-top: 10px;
+    }
+    .xarita a{
+        font-size: 15px;
+    }
+    .oftenqs h1{
+        font-size: 25px;
+    }
+    .lavha1{
+        font-size: 20px;
+    }
+    .dropdown{
+        font-size: 18px;
+    }
+    .submenuItems a{
+        font-size: 16px;
+    }
+    #navigation{
+        margin-left: 15px;
+    }
+    .tarmoq{
+        margin-left: 25px;
+    }
+    .section-title{
+        font-size: 10px;
+    }
+    
+ 
+    .lavha{
+        display: none;
+    }
+    .dots{
+        left: 28%;
+    }
+    .header .flex .logo{
+        font-size: 2rem;
+    }
+    .header .flex .logo img{
+        width: 50px;
+        height: 35px;
+    }
+    .containeruzsam{
+        height: 55vh;
+    }
+    .tab {
+        width: calc(7vh + 8px);
+    }
+    .tab img{
+        width: 10vh;
+        height: 10vh;
+    }
+    .content{
+        top:18vh;
+        height: 35vh;
+    }
+    .load-more {
+        margin-top: -25px;
+        margin-left: 18%;
+        display: inline-block;
+        padding: 8px 10px;
+        border: 2px solid #334;
+        color: #334;
+        font-size: 18px;
+        background-color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .danger{
+        display: none;
+    }
+    .registon{
+        width: 100%;
+        height: 50vh;
+        background: url("../images/Telefon/5reg400.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .chart{
+        display: none;
+    }
+    .numbers{
+        display: none;
+    }
+    .bars{
+        display: none;
+    }
+    .samuzbar{
+        display: none;
+    }
+/* Orders sahifasidagi carusel uchun */
+.container{
+    display: none;
+}
+ /* Orders sahifasidagi carusel uchun */
+    
+    .wrappermalumot1 {
+        height: 400px;
+        /* width: 300px; */
+        width: calc(100% - 10px);
+        margin-left: 6px;
+       
+    }
+    .wrappermalumot2 {
+        height: 400px;
+        
+        width: calc(100% - 10px);
+        margin-left: 6px;
+    }
+    .wrappermalumot3 {
+        height: 400px;
+        
+        width: calc(100% - 10px);
+        margin-left: 6px;
+    }
+    .wrappermalumot4 {
+        height: 400px;
+        
+        width: calc(100% - 10px);
+        margin-left: 6px;
+    }
+    .wrappermalumot5 {
+        height: 400px;
+        
+        width: calc(100% - 10px);
+        margin-left: 6px;
+    }
+    .wrappermalumot6 {
+        height: 400px;
+        
+        width: calc(100% - 10px);
+        margin-left: 6px;
+    }
+    .boxmalumot {
+          box-shadow: 0px 0px 9px 1px black;
+          border: 1px solid black;
+          border-radius: 5px;
+          height: 400px;
+          width: calc(100% - 0px);
+          padding: 4px;
+          clip-path: circle(5% at 91% 7%);
+          transition: all .5s ease-in-out;
+          cursor: pointer;
+          
+        }
+        .contentmalumot {
+            text-align: center;
+            padding: 15px 4px;
+        }
+        .boxmalumot p {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .boxmalumot span{
+            top:10px;
+        }
+        .orqafon{
+            width: 100%;
+            height: 90vh;
+            background-size:cover;
+            background-position: center right;
+            background-attachment: fixed;
+            align-items: center;
+            font-size: 17px;
+            line-height: 1.2;
+    
+        }
+        .containerbox img{
+            filter: grayscale(0);
+        }
+        .ismsharif{
+            display: none;
+         }
+        
+}
+@media (min-width:331px) and (max-width:415px) {
+    .registon .tillarone{
+        width: 100%;
+        height: 50px;
+        text-align: right;
+        padding: 10px;
+     }
+     .registon .tillartwo{
+        font-size: 15px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 5px;
+        color: white;
+     }
+     .registon .tillartwo:hover{
+        border: 1px solid rgb(44, 36, 36);
+     }
+    
+    .ism{
+        margin-left: 32%;
+    }
+    .kasb{
+        margin-left: 26%;
+    }
+    .readread1{
+        margin-left: 18%;
+       
+    }
+    .foydalanuvchiext{
+        margin-left: 55px;
+        font-size: 17px;
+    }
+    .foydalanuvchiend{
+        font-size: 17px;
+        margin-left: 50px;
+    }
+    .tarmoq{
+        margin-left: 20px;
+    }
+    .section-title{
+        font-size: 10px;
+    }
+   
+    .lavha{
+        display: none;
+    }
+    .dots{
+        left: 30%;
+    }
+    .header .flex .logo img{
+        width: 50px;
+        height: 34px;
+    }
+    .containeruzsam{
+        height: 55vh;
+    }
+    .content{
+        top: 13vh;
+        height: 42vh;
+    }
+    .tab {
+        width: calc(6vh + 8px);
+    }
+    .tab img{
+        width: 10vh;
+        height: 10vh;
+    }
+    .load-more {
+        margin-top: -25px;
+        margin-left: 25%;
+        display: inline-block;
+        padding: 8px 10px;
+        border: 2px solid #fff;
+        color: #334;
+        font-size: 18px;
+        background-color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .danger{
+        display: none;
+    }
+    /* Bar chart uchun dastur kodining boshlanishi */
+    .chart{
+        display: none;
+    }
+    .numbers{
+        display: none;
+    }
+    .bars{
+        display: none;
+    }
+    .samuzbar{
+        display: none;
+    }
+    /* Bar chart uchun dastur kodining tugashi */
+    
+    /* Orders sahifasidagi carusel uchun */
+    .container{
+        display: none;
+    }
+     /* Orders sahifasidagi carusel uchun */
+    .xarita1{
+        margin-left: 50px;
+        width: 175px;
+    }
+    .xarita1 .xarita a{
+        font-size: 15px;
+    }
+    .registon{
+        width: 100%;
+        height: 50vh;
+        background: url("../images/Telefon/5reg400.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+    .home-bg{
+        display: none;
+    }
+    [class^="label_"] {
+        display: block;
+        cursor: pointer;
+        margin: 10px 0;
+        width: 40px;
+        height: 45px;
+    }
+    .bibi{
+        margin-left: 6%;
+    }
+    .bibi3 {
+        border: 0px solid yellow;
+        width: 270px;
+        margin-left: 0px;
+    }
+    .bibi3 span img {
+        border: 0px solid black;
+        width: 270px;
+        height: 220px;
+        padding: 3px;
+        margin-right: 20px;
+        transform: scale(1);
+        transition: 0.6s;
+    }
+    .bibi3 span img:hover {
+        transform: scale(1.03);
+    }
+    #navigation {
+        margin-left: 10px;
+    }
+
+    .bibi2 {
+        font-size: 18px;
+        text-align: justify;
+        line-height: 1.5;
+    } 
+
+    .bibi3 span{
+        display: block;
+    }
+   
+    .container112 {
+        display: none;
+    }
+    
+    .orqafon{
+        width: 100%;
+        height: 90vh;
+        background-size:cover;
+        background-position: center right;
+        background-attachment: fixed;
+        align-items: center;
+         font-size: 18px;
+         line-height: 1.4;
+
+    }
+    .wrappermalumot1 {
+        
+        height: 500px;
+        width: calc(100% - 10px);
+        margin-left: 5px;
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgb(0 0 0 / 50%);
+        display: inline-block;
+    }
+    .wrappermalumot2 {
+        
+        height: 500px;
+        width: calc(100% - 10px);
+        margin-left: 5px;
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgb(0 0 0 / 50%);
+        display: inline-block;
+    }
+    .wrappermalumot3 {
+       
+        height: 500px;
+        width: calc(100% - 10px);
+        margin-left: 5px;
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgb(0 0 0 / 50%);
+        display: inline-block;
+    }
+    .wrappermalumot4 {
+      
+    
+        height: 500px;
+        width: calc(100% - 10px);
+        margin-left: 5px;
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgb(0 0 0 / 50%);
+        display: inline-block;
+    }
+    .wrappermalumot5 {
+        
+        height: 500px;
+        width: calc(100% - 10px);
+        margin-left: 5px;
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgb(0 0 0 / 50%);
+        display: inline-block;
+    }
+    .wrappermalumot6 {
+       
+        height: 500px;
+        width: calc(100% - 10px);
+        margin-left: 5px;
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgb(0 0 0 / 50%);
+        display: inline-block;
+    }
+    .boxmalumot {
+          box-shadow: 0px 0px 9px 1px midnightblue;
+          border: 1px solid black;
+          border-radius: 5px;
+          width: calc(100% - 0px);
+          margin-left: 5px;
+          height: 500px;
+          padding: 7px;
+          clip-path: circle(5% at 91% 7%);
+          transition: all .5s ease-in-out;
+          cursor: pointer;
+         
+        }
+        .contentmalumot{
+            padding: 25px 16px;
+        }
+        .boxmalumot span{
+            margin-right: 4%;
+            top: 15px;
+        }
+
+
+
+
+        .containerbox img{
+            filter: grayscale(0);
+        }
+        .ismsharif{
+            display: none;
+         }
+}
+
+/* for tablet devices*/
+@media (min-width:416px) and (max-width:460px){
+    .registon .tillarone{
+        width: 100%;
+        height: 50px;
+        text-align: right;
+        padding: 10px;
+     }
+     .registon .tillartwo{
+        font-size: 16px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 5px;
+        color: white;
+     }
+
+    .ism{
+        margin-left: 35%;
+    }
+    .kasb{
+        margin-left: 29%;
+    }
+    .readread1{
+        margin-left: 25%;
+       
+    }
+    .foydalanuvchiext{
+        margin-left: 100px;
+        font-size: 17px;
+    }
+    .foydalanuvchiend{
+        font-size: 17px;
+        margin-left: 85px;
+    }
+    .tarmoq{
+        margin-left: 15px;
+    }
+
+
+
+
+
+
+    .registon{
+        width: 100%;
+        height: 50vh;
+        background: url("../images/Desktop/Registon/registon1.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+    .section-title{
+        font-size: 10px;
+    }
+   
+    .lavha{
+        display: none;
+    }
+    .dots{
+        left: 30%;
+    }
+    .bibi{
+        margin-left: 13%;
+    }
+    .containeruzsam{
+        height: 46vh;
+    }
+    .content{
+        top: 13vh;
+        height: 35vh;
+    }
+    .tab{
+        width: calc(7vh + 8px);
+    }
+    .tab img{
+        width: 20vh;
+    }
+    .load-more {
+        margin-top: -15px;
+        margin-left: 28%;
+        display: inline-block;
+        padding: 10px 12px;
+        border: 0px solid #fff;
+        color: #334;
+        font-size: 18px;
+        background-color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .danger{
+        display: none;
+    }
+    
+    .orqafon{
+        width: 100%;
+        height: 90vh;
+        background-size:cover;
+        background-position: center right;
+        background-attachment: fixed;
+        align-items: center;
+        font-size: 20px;
+        line-height: 1.4;
+
+    }
+    .chart{
+        display: none;
+    }
+    .numbers{
+        display: none;
+    }
+    .bars{
+        display: none;
+    }
+    .samuzbar{
+        display: none;
+    }
+    /* Orders sahifasidagi carusel uchun */
+    .container{
+        display: none;
+    }
+     /* Orders sahifasidagi carusel uchun */
+    .xarita1{
+        margin-left: 70px;
+        width: 175px;
+    }
+    .xarita1 .xarita a{
+        font-size: 15px;
+    }
+    .bibi3 {
+        border: 0px solid yellow;
+        width: 320px;
+        margin-left: 0px;
+    }
+    .bibi3 span img {
+        border: 0px solid black;
+        width: 320px;
+        height: 320px;
+        padding: 5px;
+        transform: scale(1);
+        transition: 0.6s;
+    }
+    .bibi3 span img:hover {
+        transform: scale(1.04);
+    }
+    .wrappermalumot1 {
+       
+        height: 400px;
+        width: calc(100% - 10px);
+        margin-left: 5px;
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot2 {
+       
+        height: 400px;
+        width: calc(100% - 10px);
+        margin-left: 5px;
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot3 {
+      
+        height: 400px;
+        width: calc(100% - 10px);
+        margin-left: 5px;
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot4 {
+       
+        height: 400px;
+        width: calc(100% - 10px);
+        margin-left: 5px;
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot5 {
+       
+        height: 400px;
+        width: calc(100% - 10px);
+        margin-left: 5px;
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot6 {
+        
+        height: 400px;
+        width: calc(100% - 10px);
+        margin-left: 10px;width: calc(100% - 10px);
+        margin-left: 5px;
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .boxmalumot {
+        box-shadow: 0px 0px 9px 1px midnightblue;
+        width: calc(100% - 0px);
+        }
+      
+        .containerbox img{
+            filter: grayscale(0);
+        }
+        .ismsharif{
+            display: none;
+         }
+}
+@media (min-width:461px) and (max-width:560px){ 
+    .registon .tillarone{
+        width: 100%;
+        height: 50px;
+        text-align: right;
+        padding: 10px;
+     }
+     .registon .tillartwo{
+        font-size: 17px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 5px;
+        color: white;
+     }
+
+    
+    .ism{
+        margin-left: 39%;
+    }
+    .kasb{
+        margin-left: 35%;
+    }
+    .readread1{
+        margin-left: 30%;
+       
+    }
+    .foydalanuvchiext{
+        margin-left: 100px;
+        font-size: 17px;
+    }
+    .foydalanuvchiend{
+        font-size: 17px;
+        margin-left: 120px;
+    }
+    .tarmoq{
+        margin-left: 15px;
+    }
+
+
+
+
+
+    .section-title{
+        font-size: 12px;
+    }
+
+    .lavha{
+        display: none;
+    }
+    .dots{
+        left: 35%;
+    }
+    .bibi{
+        margin-left: 20%;
+    }
+    .containeruzsam{
+        height: 52vh;
+    }
+    .content{
+    top: 13vh;
+    height: 42vh;
+}
+    .tab{
+        width: calc(7vh + 8px);
+    }
+    .load-more {
+        margin-top: -25px;
+        margin-left: 30%;
+        display: inline-block;
+        padding: 10px 18px;
+        color: #334;
+        font-size: 18px;
+        background-color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .danger{
+        display: none;
+    }
+    .chart{
+        display: none;
+    }
+    .numbers{
+        display: none;
+    }
+    .bars{
+        display: none;
+    }
+    .samuzbar{
+        display: none;
+    }
+    /* Orders sahifasidagi carusel uchun */
+    .container{
+        display: none;
+    }
+     /* Orders sahifasidagi carusel uchun */
+    .xarita1{
+        margin-left: 80px;
+    }
+    .wrappermalumot1 {
+       
+        height: 400px;
+        width: 400px;
+        margin-left: calc(100% - 445px);
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot2 {
+     
+        height: 400px;
+        width: 400px;
+        margin-left: calc(100% - 445px);
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot3 {
+      
+        height: 400px;
+        width: 400px;
+        margin-left: calc(100% - 445px);
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot4 {      
+
+        height: 400px;
+        width: 400px;
+        margin-left: calc(100% - 445px);
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot5 {
+      
+        
+        height: 400px;
+        width: 400px;
+        margin-left: calc(100% - 445px);
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot6 {
+       
+        
+        height: 400px;
+        width: 400px;
+        margin-left: calc(100% - 445px);
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .boxmalumot {
+        box-shadow: 0px 0px 9px 1px midnightblue;
+        }
+    .registon{
+        width: 100%;
+        height: 60vh;
+        background: url("../images/Desktop/Registon/registon1.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .bibi3 {
+        width: 315px;
+        margin-left: calc(100% - 325px);
+        border: 0px solid black;
+    }
+
+    .bibi3 span{
+        display: block;
+    }
+    .bibi3 span img {
+        border: 0px solid red;
+        width: 300px;
+        height: 300px;
+        padding: 5px;
+        margin-right: -30px;
+        transform: scale(1);
+        transition: 0.6s;
+    }
+    .bibi3 span img:hover {
+        transform: scale(1.03);
+    }
+    .container112 {
+        display: none;
+    }
+    .orqafon{
+        width: 100%;
+        height: 90vh;
+        background-size:cover;
+        background-position: center right;
+        background-attachment: fixed;
+        animation: fadeOut 6s;
+        display: flex;
+        align-items: center;
+        line-height: 1.3;
+        font-size: 22px;
+        color: #fff;
+    }
+    .containerbox img{
+        filter: grayscale(0);
+    }
+    .ismsharif{
+        display: none;
+     }
+}
+@media (min-width:561px) and (max-width:640px){
+    .registon .tillarone{
+        width: 100%;
+        height: 50px;
+        text-align: right;
+        padding: 10px;
+     }
+     .registon .tillartwo{
+        font-size: 16px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 5px;
+        color: white;
+     }
+
+
+     
+    .ism{
+        margin-left: 40%;
+    }
+    .kasb{
+        margin-left: 36%;
+    }
+    .readread1{
+        margin-left: 33%;
+       
+    }
+    .foydalanuvchiext{
+        margin-left: 160px;
+        font-size: 20px;
+    }
+    .foydalanuvchiend{
+        font-size: 20px;
+        margin-left: 150px;
+    }
+    .tarmoq{
+        margin-left: 15px;
+    }
+
+    .ismsharif{
+        display: none;
+     }
+
+
+    .registon{
+        width: 100%;
+        height: 50vh;
+        background: url("../images/Desktop/Registon/registon1.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+    .section-title{
+        font-size: 12px;
+    }
+
+
+    .lavha{
+        display: none;
+    }
+    .dots{
+        left: 40%;
+    }
+    .containeruzsam{
+        height: 55vh;
+    }
+    .content {
+        top: 13vh;
+        height: 45vh;
+    }
+    .tab{
+        width: calc(8vh + 8px);
+    }
+    .load-more {
+        margin-top: -25px;
+        margin-left: 33%;
+        display: inline-block;
+        padding: 10px 15px;
+        color: #334;
+        font-size: 18px;
+        background-color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }.danger{
+        display: none;
+    }
+    .orqafon{
+        width: 100%;
+        height: 90vh;
+        background-size:cover;
+        background-position: center right;
+        background-attachment: fixed;
+        align-items: center;
+         font-size: 23px;
+         line-height: 1.5;
+
+    }
+    .chart{
+        display: none;
+    }
+    .numbers{
+        display: none;
+    }
+    .bars{
+        display: none;
+    }
+    .samuzbar{
+        display: none;
+    }
+    /* Orders sahifasidagi carusel uchun */
+    .container{
+        display: none;
+    }
+     /* Orders sahifasidagi carusel uchun */
+    .xarita1{
+        margin-left: 115px;
+    }
+    .bibi{
+        margin-left: 30%;
+    }
+    .bibi3 {
+        border: 0px solid yellow;
+        width: 490px;
+       
+    }
+    .bibi3 span img {
+        border: 0px solid black;
+        width: 380px;
+        height: 350px;
+        margin-left: -20px;
+        padding: 5px;
+        transform: scale(1);
+        transition: 0.6s;
+    }
+    .bibi3 span img:hover {
+        transform: scale(1.05);
+    }
+    .wrappermalumot1{
+        margin-left: calc(100% - 490px);
+    }
+    .wrappermalumot2{
+        margin-left: calc(100% - 490px);
+    }
+    .wrappermalumot3{
+        margin-left: calc(100% - 490px);
+    }
+    .wrappermalumot4{
+        margin-left: calc(100% - 490px);
+    }
+    .wrappermalumot5{
+        margin-left: calc(100% - 490px);
+    }
+    .wrappermalumot6{
+        margin-left: calc(100% - 490px);
+    }
+  
+    .boxmalumot {
+        box-shadow: 0px 0px 9px 1px midnightblue;
+        }
+        .ismsharif{
+            display: none;
+         }
+
+}
+@media (min-width:641px) and (max-width:720px){
+    .registon .tillarone{
+        width: 100%;
+        height: 50px;
+        text-align: right;
+        padding: 10px;
+     }
+     .registon .tillartwo{
+        font-size: 17px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 5px;
+        color: white;
+     }
+
+        
+    .ism{
+        margin-left: 41%;
+    }
+    .kasb{
+        margin-left: 38%;
+    }
+    .readread1{
+        margin-left: 35%;
+       
+    }
+    .foydalanuvchiext{
+        margin-left: 185px;
+        font-size: 20px;
+    }
+    .foydalanuvchiend{
+        font-size: 20px;
+        margin-left: 180px;
+    }
+    .tarmoq{
+        margin-left: 15px;
+    }
+
+    .ismsharif{
+       display: none;
+    }
+
+    .registon{
+        width: 100%;
+        height: 60vh;
+        background: url("../images/Desktop/Registon/registon1.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+    .section-title{
+        font-size: 12px;
+    }
+ 
+    .lavha{
+        display: none;
+    }
+    .containeruzsam{
+        height: 65vh;
+    }
+    .content {
+        top: 13vh;
+        height: 55vh;
+    }
+    .tab{
+        width: calc(8vh + 8px);
+    }
+    .load-more {
+        margin-top: -25px;
+        margin-left: 35%;
+        display: inline-block;
+        padding: 12px 18px;
+        border: 0px solid #334;
+        color: #334;
+        font-size: 18px;
+        background-color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .danger{
+        display: none;
+    }
+    .orqafon{
+        width: 100%;
+        height: 90vh;
+        background-size:cover;
+        background-position: center right;
+        background-attachment: fixed;
+        align-items: center;
+         font-size: 23px;
+         line-height: 1.5;
+
+    }
+    .chart{
+        display: none;
+    }
+    .numbers{
+        display: none;
+    }
+    .bars{
+        display: none;
+    }
+    .samuzbar{
+        display: none;
+    }
+    .xarita1{
+        margin-left: 170px;
+    }
+    .bibi{
+        margin-left: 30%;
+    }
+    .bibi3 {
+        width: 510px;
+     }
+    .bibi3 span img {
+        border: 0px solid black;
+        width: 450px;
+        height: 400px;
+        padding: 10px;
+        margin-left: 0px;
+        transform: scale(1);
+        transition: 0.6s;
+    }
+    .bibi3 span img:hover {
+        transform: scale(1.06);
+    }
+    .wrappermalumot1{
+        margin-left: 150px;
+    }
+    .wrappermalumot2{
+        margin-left: 150px;
+    }
+    .wrappermalumot3{
+        margin-left: 150px;
+    }
+    .wrappermalumot4{
+        margin-left: 150px;
+    }
+    .wrappermalumot5{
+        margin-left: 150px;
+    }
+    .wrappermalumot6{
+        margin-left: 150px;
+    }
+ 
+    .boxmalumot {
+        box-shadow: 0px 0px 9px 1px midnightblue;
+        }
+}
+@media (min-width:721px) and (max-width:822px){
+    .registon .tillarone{
+        width: 100%;
+        height: 50px;
+        text-align: right;
+        padding: 10px;
+     }
+     .registon .tillartwo{
+        font-size: 17px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 5px;
+        color: white;
+     }
+
+
+    .ism{
+        display: none;
+    }
+    .ismsharif{
+        margin-left: 220px;
+    }
+    .kasb{
+        display: none;
+    }
+    .readread1{
+        display: none;
+       
+    }
+    .foydalanuvchiext{
+        display: none;
+    }
+    .foydalanuvchiend{
+        display: none;
+    }
+    .tarmoq{
+        margin-left: 15px;
+    }
+
+
+
+
+
+
+    .registon{
+        width: 100%;
+        height: 70vh;
+        background: url("../images/Desktop/Registon/registon1.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+    .section-title{
+        font-size: 12px;
+    }
+    /* S */
+    .lavha{
+        display: none;
+    }
+    .containeruzsam{
+        height: 70vh;
+    }
+    .content {
+        top: 13vh;
+        height: 60vh;
+    }
+    .load-more {
+        margin-top: -25px;
+        margin-left: 38%;
+        display: inline-block;
+        padding: 12px 20px;
+        border: 0px solid #334;
+        color: #334;
+        font-size: 18px;
+        background-color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .danger{
+        display: none;
+    }
+    .chart{
+        display: none;
+    }
+    .numbers{
+        display: none;
+    }
+    .bars{
+        display: none;
+    }
+    .samuzbar{
+        display: none;
+    }
+    .xarita1{
+        margin-left: 220px;
+    }
+    .bibi{
+        margin-left: 36%;
+    }
+    .bibi3 {
+        width: 510px;
+     }
+     .bibi3 span img {
+        border: 0px solid black;
+        width: 450px;
+        height: 450px;
+        padding: 6px;
+        margin-top: 10px;
+        margin-left: 45px;
+        transform: scale(1);
+        transition: 0.6s;
+    }
+    .bibi3 span img:hover {
+        transform: scale(1.06);
+    }
+    .wrappermalumot1 {
+       
+        height: 400px;
+        width: 400px;
+        margin-left: 200px;
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot2 {
+      
+        height: 400px;
+        width: 400px;
+        margin-left: 200px;
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot3 {
+       
+        height: 400px;
+        width: 400px;
+        margin-left: 200px;
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot4 {
+      
+        height: 400px;
+        width: 400px;
+        margin-left: 200px;
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot5 {
+       
+        height: 400px;
+        width: 400px;
+        margin-left: 200px;
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot6 {
+      
+        height: 400px;
+        width: 400px;
+        margin-left: 200px;
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .boxmalumot {
+        box-shadow: 0px 0px 9px 1px midnightblue;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 400px;
+        padding: 10px;
+        clip-path: circle(5% at 91% 7%);
+        transition: all .5s ease-in-out;
+        cursor: pointer;
+        height: 400px;
+    }
+    
+
+}
+@media (min-width:823px) and (max-width:880px){
+    .registon .tillarone{
+        width: 100%;
+        height: 50px;
+        text-align: right;
+        padding: 10px;
+     }
+     .registon .tillartwo{
+        font-size: 18px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 5px;
+        color: white;
+     }
+
+
+    .ism{
+        margin-left: 33%;
+    }
+    .kasb{
+        margin-left: 28%;
+    }
+    .readread1{
+        margin-left: 25%;
+       
+    }
+    .foydalanuvchiext{
+        margin-left: 60px;
+        font-size: 20px;
+    }
+    .foydalanuvchiend{
+        font-size: 20px;
+        margin-left: 40px;
+    }
+    .tarmoq{
+        margin-left: 15px;
+    }
+
+    .ismsharif{
+        display: none;
+     }
+    .registon{
+        width: 100%;
+        height: 75vh;
+        background: url("../images/Desktop/Registon/registon1.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+    .section-title{
+        font-size: 13px;
+    }
+ 
+    .lavha{
+        display: none;
+    }
+    .containeruzsam{
+        height: 72vh;
+    }
+    .content {
+        top: 13vh;
+        height: 60vh;
+    }
+    .danger{
+        display: none;
+    }
+    .chart{
+        display: none;
+    }
+    .numbers{
+        display: none;
+    }
+    .bars{
+        display: none;
+    }
+    .samuzbar{
+        display: none;
+    }
+    .xarita1{
+        margin-left: 250px;
+    }
+    .bibi{
+        margin-left: 38%;
+    }
+    .bibi3 {
+        width: 640px;
+    }
+    .bibi3 span img {
+        border: 1px solid black; 
+        width: 320px;
+        height: 320px;
+        margin-left: -20px;
+        padding: 13px;
+        transform: scale(1);
+        transition: 0.6s;
+    }
+    .bibi3 span img :hover{
+        transform: scale(1.06);
+    }
+    .wrappermalumot1 {
+      
+        height: 400px;
+        width: 400px;
+        margin-left: calc(100% - 620px);
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot2 {
+        
+        height: 400px;
+        width: 400px;
+        margin-left: calc(100% - 620px);
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot3 {
+        
+        height: 400px;
+        width: 400px;
+        margin-left: calc(100% - 620px);
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot4 {
+        
+        height: 400px;
+        width: 400px;
+        margin-left: calc(100% - 620px);
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot5 {
+       
+        height: 400px;
+        width: 400px;
+        margin-left: calc(100% - 620px);
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .wrappermalumot6 {
+       
+        height: 400px;
+        width: 400px;
+        margin-left: calc(100% - 620px);
+        margin-top: 30px;
+        box-shadow: 0 15px 20px 5px rgba(0,0,0,0.5);
+        display: inline-block;
+    }
+    .boxmalumot {
+        box-shadow: 0px 0px 9px 1px midnightblue;
+        border: 1px solid black;
+        border-radius: 5px;
+        height: 400px;
+        width: 400px;
+        padding: 2px;
+        clip-path: circle(5% at 92% 6%);
+        transition: all .5s ease-in-out;
+        cursor: pointer;
+        
+    }
+    
+   
+}
+/* for computer devices */
+@media (min-width:881px) and (max-width:1000px){ 
+    .registon .tillarone{
+        width: 100%;
+        height: 50px;
+        text-align: right;
+        padding: 10px;
+     }
+     .registon .tillartwo{
+        font-size: 18px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 5px;
+        margin: 10px;
+        padding: 5px;
+        color: white;
+     }
+
+
+    .ism{
+        margin-left: 37%;
+    }
+    .kasb{
+        margin-left: 33%;
+    }
+    .readread1{
+        margin-left: 28%;
+       
+    }
+    .foydalanuvchiext{
+        margin-left: 85px;
+        font-size: 20px;
+    }
+    .foydalanuvchiend{
+        font-size: 20px;
+        margin-left: 88px;
+    }
+    .tarmoq{
+        margin-left: 15px;
+    }
+
+    .ismsharif{
+        display: none;
+     }  
+    .section-title{
+        font-size: 13px;
+    }
+    .wrappermalumot1{
+        margin-left: 38px;
+    }
+    .wrappermalumot2{
+        margin-left: 38px;
+    }
+    .wrappermalumot3{
+        margin-left: 38px;
+    }
+    .wrappermalumot4{
+        margin-left: 38px;
+    }
+    .wrappermalumot5{
+        margin-left: 38px;
+    }
+    .wrappermalumot6{
+        margin-left: 38px;
+    }
+
+
+    .containeruzsam{
+        height: 87vh;
+    }
+    .content {
+        top: 15vh;
+        height: 75vh;
+    }
+    .danger{
+        display: none;
+    }
+    .samuzbar b {
+        border: 0px solid black;
+        width: 300px;
+        margin-top: 100px;
+        height: 50px;
+        margin-left: 22%;
+        font-size: 25px;
+        transition: 1s;
+        text-align: center;
+    }
+    .xarita1{
+        margin-left: 310px;
+    }   
+    .bibi{
+        margin-left: 42%;
+    }
+    .bibi3{
+            width: 780px;
+            margin-left: 20px;
+        }
+        .bibi3 span img {
+            border: 0px solid black;
+            width: 370px;
+            height: 350px;
+            margin-left: 13px;
+            margin-top: 10px;
+            padding: 5px;
+            transform: scale(1);
+            transition: 0.6s;
+        }
+        .bibi3 span img :hover{
+            transform: scale(1.06);
+        }
+        .registon{
+            width: 100%;
+            height: 80vh;
+            background: url("../images/Desktop/Registon/registon1.jpg");
+            background-size: cover;
+            background-position: center center;
+        }
+    .home-bg{
+        display: none;
+    }
+   
+}
+@media (min-width:1001px) and (max-width:1100px){
+    
+    .ism{
+        margin-left: 25%;
+    }
+    .kasb{
+        margin-left: 20%;
+    }
+    .tarmoq{
+        margin-left: 15px;
+    }
+
+    .readread1{
+        margin-left: 18%;
+       
+    }
+    .foydalanuvchiend{
+        font-size: 20px;
+        margin-left: 0px;
+    }
+    .foydalanuvchiext{
+        font-size: 20px;
+        margin-left: 0px;
+    }
+    .ismsharif{
+        display: none;
+     }
+    .section-title{
+        font-size: 13px;
+    }
+   
+    .wrappermalumot1{
+        margin-left: 60px;
+    }
+    .wrappermalumot2{
+        margin-left: 80px;
+    }
+    .wrappermalumot3{
+        margin-left: 60px;
+    }
+    .wrappermalumot4{
+        margin-left: 80px;
+    }
+    .wrappermalumot5{
+        margin-left: 60px;
+    }
+    .wrappermalumot6{
+        margin-left: 80px;
+    }
+
+
+    .containeruzsam{
+        height: 87vh;
+    }
+    .content {
+        top: 15vh;
+        height: 75vh;
+    }
+    .danger{
+        display: none;
+    }
+    .samuzbar b {
+        border: 0px solid black;
+        width: 300px;
+        margin-top: 100px;
+        height: 50px;
+        margin-left: 22%;
+        font-size: 25px;
+        transition: 1s;
+        text-align: center;
+    }
+    .xarita1{
+        margin-left: 310px;
+    }   
+    .bibi{
+        margin-left: 42%;
+    }
+    .bibi3{
+            width: 780px;
+            margin-left: 55px;
+        }
+        .bibi3 span img {
+            border: 0px solid black;
+            width: 370px;
+            height: 350px;
+            margin-left: 13px;
+            margin-top: 10px;
+            padding: 5px;
+            transform: scale(1);
+            transition: 0.6s;
+        }
+        .bibi3 span img :hover{
+            transform: scale(1.06);
+        }
+    .registon{
+        width: 100%;
+        background: url("../images/Desktop/Registon/registon1.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+    .home-bg{
+        display: none;
+    }
+}
+@media (min-width:1101px) and (max-width:1200px){
+    .ismsharif{
+        display: none;
+     }
+    
+    .wrappermalumot1{
+        margin-left: 130px;
+    }
+    .wrappermalumot2{
+        margin-left: 70px;
+    }
+    .wrappermalumot3{
+        margin-left: 130px;
+    }
+    .wrappermalumot4{
+        margin-left: 70px;
+    }
+    .wrappermalumot5{
+        margin-left: 130px;
+    }
+    .wrappermalumot6{
+        margin-left: 70px;
+    }
+
+
+    .containeruzsam{
+        height: 87vh;
+    }
+    .content {
+        top: 15vh;
+        height: 75vh;
+    }
+    .danger{
+        display: none;
+    }
+    .samuzbar b {
+        border: 0px solid black;
+        width: 300px;
+        margin-top: 100px;
+        height: 50px;
+        margin-left: 22%;
+        font-size: 25px;
+        transition: 1s;
+        text-align: center;
+    }
+    .xarita1{
+        margin-left: 320px;
+    }   
+    .bibi{
+        margin-left: 42%;
+    }
+    .bibi3{
+            width: 780px;
+            margin-left: 40px;
+        }
+        .bibi3 span img {
+            border: 0px solid black;
+            width: 370px;
+            height: 350px;
+            margin-left: 13px;
+            margin-top: 10px;
+            padding: 5px;
+            transform: scale(1);
+            transition: 0.6s;
+        }
+        .bibi3 span img :hover{
+            transform: scale(1.06);
+        }
+    .registon{
+        width: 100%;
+        background: url("../images/Desktop/Registon/registon1.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+    .home-bg{
+        display: none;
+    }
+}
+@media (min-width:1201px) and (max-width:1300px){
+    .ismsharif{
+        display: none;
+     }
+    .xarita1{
+        margin-left: 350px;
+    }
+    .wrappermalumot1{
+        margin-left: 180px;
+    }
+    .wrappermalumot2{
+        margin-left: 100px;
+    }
+    .wrappermalumot3{
+        margin-left: 180px;
+    }
+    .wrappermalumot4{
+        margin-left: 100px;
+    }
+    .wrappermalumot5{
+        margin-left: 180px;
+    }
+    .wrappermalumot6{
+        margin-left: 100px;
+    }
+
+    .containeruzsam{
+        height: 87vh;
+    }
+    .content {
+        top: 15vh;
+        height: 75vh;
+    }
+    .danger{
+        display: none;
+    }
+    .samuzbar b {
+        border: 0px solid black;
+        width: 300px;
+        margin-top: 100px;
+        height: 50px;
+        margin-left: 22%;
+        font-size: 25px;
+        transition: 1s;
+        text-align: center;
+    }
+    .xarita1{
+        margin-left: 310px;
+    }   
+    .bibi{
+        margin-left: 42%;
+    }
+    .bibi3{
+            width: 780px;
+            margin-left: 40px;
+        }
+        .bibi3 span img {
+            border: 0px solid black;
+            width: 370px;
+            height: 350px;
+            margin-left: 13px;
+            margin-top: 10px;
+            padding: 5px;
+            transform: scale(1);
+            transition: 0.6s;
+        }
+        .bibi3 span img :hover{
+            transform: scale(1.06);
+        }
+    .registon{
+        width: 100%;
+        background: url("../images/Desktop/Registon/registon1.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+    .home-bg{
+        display: none;
+    }
+}
+@media (min-width:1301px) and (max-width:1400px){
+    .ismsharif{
+        display: none;
+     }
+    
+
+    .xarita1{
+        margin-left: 350px;
+    }
+    .wrappermalumot1{
+        margin-left: 65px;
+    }
+    .wrappermalumot2{
+        margin-left: 15px;
+    }
+    .wrappermalumot3{
+        margin-left: 15px;
+    }
+    .wrappermalumot4{
+        margin-left: 65px;
+    }
+    .wrappermalumot5{
+        margin-left: 15px;
+    }
+    .wrappermalumot6{
+        margin-left: 15px;
+    }
+
+    .containeruzsam{
+        height: 87vh;
+    }
+    .content {
+        top: 15vh;
+        height: 75vh;
+    }
+    .danger{
+        display: none;
+    }
+    .samuzbar b {
+        border: 0px solid black;
+        width: 300px;
+        margin-top: 100px;
+        height: 50px;
+        margin-left: 30%;
+        font-size: 25px;
+        transition: 1s;
+        text-align: center;
+    }
+    .xarita1{
+        margin-left: 310px;
+    }   
+    .bibi{
+        margin-left: 42%;
+    }
+    .bibi3{
+            width: 780px;
+            margin-left: 40px;
+        }
+        .bibi3 span img {
+            border: 0px solid black;
+            width: 370px;
+            height: 350px;
+            margin-left: 13px;
+            margin-top: 10px;
+            padding: 5px;
+            transform: scale(1);
+            transition: 0.6s;
+        }
+        .bibi3 span img :hover{
+            transform: scale(1.06);
+        }
+    .registon{
+        width: 100%;
+        background: url("../images/Desktop/Registon/registon1.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+    .home-bg{
+        display: none;
+    }
+}
+@media (min-width:1401px) and (max-width:1500px){
+    .ismsharif{
+        display: none;
+     }
+    .wrappermalumot1{
+        margin-left: 120px;
+    }
+    .wrappermalumot2{
+        margin-left: 10px;
+    }
+    .wrappermalumot3{
+        margin-left: 10px;
+    }
+    .wrappermalumot4{
+        margin-left: 120px;
+    }
+    .wrappermalumot5{
+        margin-left: 10px;
+    }
+    .wrappermalumot6{
+        margin-left: 10px;
+    }
+
+    .danger{
+        display: none;
+    }
+    .samuzbar b {
+        border: 0px solid black;
+        width: 300px;
+        margin-top: 100px;
+        height: 50px;
+        margin-left: 300px;
+        font-size: 30px;
+        transition: 1s;
+        text-align: center;
+    }
+
+    .boxmalumot {
+        box-shadow: 0px 0px 9px 1px midnightblue;
+    }
+    .bibi{
+        margin-left: 45%;
+    }
+    .bibi3 {
+        width: 945px;
+    }
+    .bibi3 span img {
+        border: 0px solid black;
+        width: 400px;
+        height: 400px;
+        margin-left: 10px;
+        padding: 5px;
+        transform: scale(1);
+        transition: 0.6s;
+    }
+    .bibi3 span img :hover{
+        transform: scale(1.06);
+    }
+  }
+
+
+  @media (min-width:1501px) and (max-width:1600px){
+    .ismsharif{
+        display: none;
+     }
+    .wrappermalumot1{
+        margin-left: 200px;
+    }
+    .wrappermalumot2{
+        margin-left: 10px;
+    }
+    .wrappermalumot3{
+        margin-left: 10px;
+    }
+    .wrappermalumot4{
+        margin-left: 200px;
+    }
+    .wrappermalumot5{
+        margin-left: 10px;
+    }
+    .wrappermalumot6{
+        margin-left: 10px;
+    }
+  }
+  @media (min-width:1601px){
+    .ismsharif{
+        display: none;
+     }
+    .wrappermalumot1{
+        margin-left: 120px;
+    }
+    .wrappermalumot2{
+        margin-left: 10px;
+    }
+    .wrappermalumot3{
+        margin-left: 10px;
+    }
+    .wrappermalumot4{
+        margin-left: 120px;
+    }
+    .wrappermalumot5{
+        margin-left: 10px;
+    }
+    .wrappermalumot6{
+        margin-left: 10px;
+    }
+  }
